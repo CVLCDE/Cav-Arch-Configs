@@ -1,0 +1,7 @@
+# Open Rofi 
+super + d
+	rofi -show window -theme slate -icon-theme "Papirus" -show-icons
+
+# Open pcmanfm
+super + F1
+	pcmanfm
