@@ -22,6 +22,8 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 require("awful.hotkeys_popup.keys")
 
 
+
+
 -- ===================================================================
 -- Error Handling
 -- ===================================================================
@@ -46,11 +48,24 @@ modkey = "Mod4"
 
 
 -- ===================================================================
--- Menu
+-- Themes
 -- ===================================================================
-local menu_config_dir = 'initialization/menu'
-local menu = require(menu_config_dir)
+local themes = {
+	"default/theme.lua", -- 1
+}
 
+-- change this number to use the corresponding theme
+local theme = themes[1]
+local theme_config_dir = gears.filesystem.get_themes_dir() 
+-- beautiful.init('/home/cav-arch/.config/awesome/themes/pro-dark/theme.lua')
+beautiful.init('/home/cav-arch/.config/awesome/themes/default/theme.lua')
+
+
+-- ===================================================================
+-- Layouts
+-- ===================================================================
+local layouts_config_dir = 'initialization/layouts'
+local layouts = require(layouts_config_dir)
 
 -- ===================================================================
 -- Wibar
@@ -92,27 +107,6 @@ local tags = require(tags_config_dir)
 -- ===================================================================
 local keys_config_dir = 'initialization/keys'
 local keys = require(keys_config_dir)
-
-
--- ===================================================================
--- Themes
--- ===================================================================
-local themes = {
-	"default/theme.lua", -- 1
-}
-
--- change this number to use the corresponding theme
-local theme = themes[1]
-local theme_config_dir = gears.filesystem.get_themes_dir() 
--- beautiful.init('/home/cav-arch/.config/awesome/themes/pro-dark/theme.lua')
-beautiful.init('/home/cav-arch/.config/awesome/themes/default/theme.lua')
-
-
--- ===================================================================
--- Widgets
--- ===================================================================
-
-
 
 
 -- ===================================================================

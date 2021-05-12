@@ -4,7 +4,9 @@ local menubar = require("menubar")
 local wibox = require("wibox")
 local ruled = require("ruled")
 
--- {{{ Wibar
+-- ===================================================================
+-- Widgets
+-- ===================================================================
 
 -- Keyboard map indicator and switcher
 mykeyboardlayout = awful.widget.keyboardlayout()
@@ -12,27 +14,43 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
 
+-- Wired Connection Widget
+local net_widgets = require("widgets/net_widgets")
+net_wired = net_widgets.indicator({
+    interfaces  = {"enp2s0", "enp5s0", "and_another_one"},
+    timeout     = 5
+})
 
--- Create a launcher widget and a main menu
-myawesomemenu = {
-   { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
-   { "manual", terminal .. " -e man awesome" },
-   { "edit config", editor_cmd .. " " .. awesome.conffile },
-   { "restart", awesome.restart },
-   { "quit", function() awesome.quit() end },
+-- CPU Widget
+local cpu_widget = require("widgets/cpu-widget/cpu-widget")
+cpu_widget = cpu_widget({
+    width = 70,
+    step_width = 2,
+    step_spacing = 0,
+    color = '#434c5e'
+})
+
+-- RAM Widget
+local ram_widget = require("widgets/ram-widget/ram-widget")
+ram_widget = ram_widget({
+    color_used = "#FF495F",
+    color_free = "#434c5e",
+    color_buf = "#161b22"
+})
+
+-- Logout Widget 
+local logout_popup = require("widgets/logout-popup-widget/logout-popup")
+
+
+-- Sep 
+local sep = wibox.widget {
+    orientation  = 'vertical',
+    widget       = wibox.widget.separator,
+    forced_width = 2,
+    border_width = 3,
+    thickness = 2
 }
 
-mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", terminal }
-                                  }
-                        })
-
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-                                     menu = mymainmenu })
-
--- Menubar configuration
-menubar.utils.terminal = terminal -- Set the terminal for applications that require it
--- }}}
 
 screen.connect_signal("request::desktop_decoration", function(s)
     -- Each screen has its own tag table.
@@ -106,18 +124,21 @@ screen.connect_signal("request::desktop_decoration", function(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            mylauncher,
             s.mytaglist,
             s.mypromptbox,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+            cpu_widget,
+            ram_widget,
+            net_wired,
             mykeyboardlayout,
             wibox.widget.systray(),
             mytextclock,
+            logout_popup.widget{},
             s.mylayoutbox,
         },
     }
 end)
--- }}}
+

@@ -17,6 +17,30 @@
 				"selected_items":
 				[
 					[
+						"log",
+						"logout_widget"
+					],
+					[
+						"tag",
+						"taglist"
+					],
+					[
+						"net",
+						"netup_icon"
+					],
+					[
+						"net_",
+						"net_wired"
+					],
+					[
+						"my",
+						"mylauncher"
+					],
+					[
+						"layo",
+						"layouts_config_dir"
+					],
+					[
 						"netw",
 						"network_widget"
 					],
@@ -27,10 +51,6 @@
 					[
 						"init",
 						"initialization"
-					],
-					[
-						"tag",
-						"tags_config_dir"
 					],
 					[
 						"noti",
@@ -65,10 +85,37 @@
 			"buffers":
 			[
 				{
-					"file": "/home/cav-arch/.config/.gitignore",
+					"file": "/home/cav-arch/.config/awesome/rc.lua",
 					"settings":
 					{
-						"buffer_size": 31,
+						"buffer_size": 4287,
+						"encoding": "UTF-8",
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/cav-arch/.config/awesome/initialization/wibar.lua",
+					"settings":
+					{
+						"buffer_size": 4647,
+						"encoding": "UTF-8",
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/cav-arch/.config/awesome/widgets/logout-popup-widget/logout-popup.lua",
+					"settings":
+					{
+						"buffer_size": 5530,
+						"encoding": "UTF-8",
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/cav-arch/.config/awesome/widgets/logout-menu-widget/logout-menu.lua",
+					"settings":
+					{
+						"buffer_size": 4496,
 						"encoding": "UTF-8",
 						"line_ending": "Unix"
 					}
@@ -106,16 +153,31 @@
 			},
 			"expanded_folders":
 			[
-				"/home/cav-arch/.config/awesome",
-				"/home/cav-arch/.config/awesome/themes"
+				"/home/cav-arch/.config/awesome"
 			],
 			"file_history":
 			[
+				"/home/cav-arch/.config/awesome/widgets/cpu-widget/cpu-widget.lua",
+				"/home/cav-arch/.config/archives/awesome/initialization/wibar.lua",
+				"/home/cav-arch/.config/awesome/widgets/lain/widget/cpu.lua",
+				"/home/cav-arch/.config/awesome/themes/multicolor/theme.lua",
+				"/home/cav-arch/Downloads/awesome-copycats/rc.lua.template",
+				"/home/cav-arch/.config/awesome/initialization/wibar.lua",
+				"/home/cav-arch/.config/awesome/widgets/taglist.lua",
+				"/home/cav-arch/.config/awesome/widgets/apt-widget/apt-widget.lua",
+				"/home/cav-arch/.config/awesome/widgets/net_widgets/indicator.lua",
+				"/home/cav-arch/.config/awesome/widgets/network.lua",
+				"/home/cav-arch/.config/awesome/initialization/keys.lua",
+				"/home/cav-arch/.config/awesome/initialization/menu.lua",
+				"/home/cav-arch/.config/awesome/widgets/menu-launcher.lua",
+				"/home/cav-arch/.config/awesome/net_widgets/indicator.lua",
+				"/home/cav-arch/.config/awesome/widgets/lain/helpers.lua",
+				"/home/cav-arch/.config/awesome/widgets/lain/net.lua",
+				"/home/cav-arch/.config/awesome/initialization/layouts.lua",
+				"/home/cav-arch/.config/.gitignore",
 				"/home/cav-arch/.gitignore",
 				"/home/cav-arch/.config/awesome/rc.lua",
-				"/home/cav-arch/.config/awesome/initialization/menu.lua",
 				"/home/cav-arch/.config/awesome/backup-rc.lua",
-				"/home/cav-arch/.config/awesome/initialization/wibar.lua",
 				"/home/cav-arch/.config/picom/picom.conf",
 				"/home/cav-arch/.config/picom/picom-backup.conf",
 				"/home/cav-arch/.config/awesome/modular-rc.lua",
@@ -134,11 +196,9 @@
 				"/home/cav-arch/.config/awesome/themes/mirage/initialization/exit-screen.lua",
 				"/home/cav-arch/.config/awesome/rc.lua.save",
 				"/home/cav-arch/.config/awesome/rc.lua.template",
-				"/home/cav-arch/.config/awesome/widgets/taglist.lua",
 				"/home/cav-arch/.config/awesome/initialization/tags.lua",
 				"/home/cav-arch/.config/awesome/initialization/notifications.lua",
 				"/home/cav-arch/.config/awesome/initialization/rules.lua",
-				"/home/cav-arch/.config/awesome/initialization/keys.lua",
 				"/home/cav-arch/.config/awesome/better-rc.lua",
 				"/home/cav-arch/.config/awesome/themes/default/theme.lua",
 				"/home/cav-arch/.config/awesome/Initialization/keys.lua",
@@ -154,7 +214,7 @@
 			],
 			"find":
 			{
-				"height": 25.0
+				"height": 41.0
 			},
 			"find_in_files":
 			{
@@ -168,6 +228,21 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"buttons",
+					"logout_menu_widget",
+					"buttons",
+					"theme",
+					"auto",
+					"chosen_theme",
+					"quit",
+					"buttons",
+					"font",
+					"interface",
+					"+",
+					"+1",
+					"interfaces",
+					"netdown",
+					"local v",
 					"menu",
 					"launcher",
 					"task",
@@ -233,29 +308,59 @@
 			"groups":
 			[
 				{
-					"selected": 0,
+					"selected": 1,
 					"sheets":
 					[
 						{
 							"buffer": 0,
-							"file": "/home/cav-arch/.config/.gitignore",
+							"file": "/home/cav-arch/.config/awesome/rc.lua",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 31,
+								"buffer_size": 4287,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										31,
-										31
+										1810,
+										1810
 									]
 								],
 								"settings":
 								{
-									"syntax": "Packages/Git Formats/Git Ignore.sublime-syntax"
+									"syntax": "Packages/Lua/Lua.sublime-syntax"
+								},
+								"translation.x": 0.0,
+								"translation.y": 336.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 3,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/home/cav-arch/.config/awesome/initialization/wibar.lua",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 4647,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1045,
+										1045
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Lua/Lua.sublime-syntax",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
 								},
 								"translation.x": 0.0,
 								"translation.y": 0.0,
@@ -263,13 +368,73 @@
 							},
 							"stack_index": 0,
 							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/home/cav-arch/.config/awesome/widgets/logout-popup-widget/logout-popup.lua",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 5530,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1142,
+										1142
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Lua/Lua.sublime-syntax",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 630.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 3,
+							"file": "/home/cav-arch/.config/awesome/widgets/logout-menu-widget/logout-menu.lua",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 4496,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										3992,
+										3992
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Lua/Lua.sublime-syntax",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 1092.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"type": "text"
 						}
 					]
 				}
 			],
 			"incremental_find":
 			{
-				"height": 25.0
+				"height": 23.0
 			},
 			"input":
 			{
@@ -307,11 +472,11 @@
 				"height": 0.0
 			},
 			"pinned_build_system": "",
-			"position": "0,0,0,0,0,965,35,1908,371,1920,1080",
+			"position": "0,0,0,0,0,10,35,1908,1068,1920,1080",
 			"project": "",
 			"replace":
 			{
-				"height": 46.0
+				"height": 42.0
 			},
 			"save_all_on_build": true,
 			"select_file":
@@ -349,7 +514,7 @@
 			"show_open_files": false,
 			"show_tabs": true,
 			"side_bar_visible": true,
-			"side_bar_width": 261.0,
+			"side_bar_width": 50.0,
 			"status_bar_visible": true,
 			"template_settings":
 			{
