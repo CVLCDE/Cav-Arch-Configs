@@ -3,6 +3,7 @@ local beautiful = require("beautiful")
 local menubar = require("menubar")
 local wibox = require("wibox")
 local ruled = require("ruled")
+local lain  = require("lain")
 
 -- ===================================================================
 -- Widgets
@@ -41,15 +42,17 @@ ram_widget = ram_widget({
 -- Logout Widget 
 local logout_popup = require("widgets/logout-popup-widget/logout-popup")
 
+-- Pacman Widget 
+local pacman = require("widgets/pacmanwidget/init")
+pacman = pacman.create(90)
 
 -- Sep 
-local sep = wibox.widget {
-    orientation  = 'vertical',
-    widget       = wibox.widget.separator,
-    forced_width = 2,
-    border_width = 3,
-    thickness = 2
-}
+local markup = lain.util.markup
+local sep = wibox.widget.textbox(
+    markup.font("Terminus 3", " ") .. 
+    markup.fontfg("Terminus 10.5", "#777777", "|") .. 
+    markup.font("Terminus 5", " "
+))
 
 
 screen.connect_signal("request::desktop_decoration", function(s)
@@ -130,12 +133,19 @@ screen.connect_signal("request::desktop_decoration", function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+            pacman,
+            sep,
             cpu_widget,
+            sep,
             ram_widget,
+            sep,
             net_wired,
+            sep,
             mykeyboardlayout,
+            sep,
             wibox.widget.systray(),
             mytextclock,
+            sep,
             logout_popup.widget{},
             s.mylayoutbox,
         },

@@ -65,7 +65,7 @@ local function launch(args)
     local bg_color = args.bg_color or beautiful.bg_normal
     local accent_color = args.accent_color or beautiful.bg_focus
     local text_color = args.text_color or beautiful.fg_normal
-    local phrases = args.phrases or {'Goodbye!'}
+    local phrases = args.phrases or {'Power Menu'}
     local icon_size = args.icon_size or 40
     local icon_margin = args.icon_margin or 16
 
